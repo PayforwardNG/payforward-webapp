@@ -1,0 +1,54 @@
+   /* QuickReset */
+   *{margin:0;box-sizing:border-box;}html,body{height:100%;font:14px/1.4 sans-serif;}
+
+   /* CUSTOM RANGE INPUT */
+   .range-div {
+     position: relative;
+   }
+   
+   .range {
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     background-image: linear-gradient(to right, #1299E6, #A0D9F9);
+     width: 50%;
+     height: 1px;
+     outline: none;
+   }
+   
+   .range:active::-webkit-slider-thumb {
+     box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.4);
+   }
+   
+   .range::-webkit-slider-thumb {
+     appearance: none;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     height: 30px;
+     width: 50px;
+     background: #1299E6;
+     border-radius: 30px;
+     cursor: grab;
+   }
+   
+   .range-thumb {
+     position: absolute;
+     margin-left: -93px;
+     border: 1px solid red;
+     /* half :thumb width */
+     top: 0;
+     width: 50px;
+     /* same as :thumb */
+     height: 30px;
+     /* same as :thumb */
+     text-align: center;
+     color: #fff;
+     line-height: 30px;
+     font-size: 12px;
+     pointer-events: none;
+     /* ignore mouse */
+   }
+   
+   .range-thumb::before {
+     content: attr(data-val) " ";
+   }
